@@ -638,8 +638,8 @@ void acquisition::Capture::init_cameras(bool soft = false) {
             if (!soft) {
 
                 cams[i].set_color(color_);
-                cams[i].setIntValue("BinningHorizontal", binning_);
-                cams[i].setIntValue("BinningVertical", binning_);                
+                //cams[i].setIntValue("BinningHorizontal", binning_);
+                //cams[i].setIntValue("BinningVertical", binning_);                
                 cams[i].setEnumValue("ExposureMode", "Timed");
                 cams[i].setBoolValue("ReverseX", flip_horizontal_vec_[i]);
                 cams[i].setBoolValue("ReverseY", flip_vertical_vec_[i]);
@@ -660,10 +660,10 @@ void acquisition::Capture::init_cameras(bool soft = false) {
                     cams[i].setEnumValue("ExposureAuto", "Continuous");
                 }
                 if (target_grey_value_ > 4.0) {
-                    cams[i].setEnumValue("AutoExposureTargetGreyValueAuto", "Off");
-                    cams[i].setFloatValue("AutoExposureTargetGreyValue", target_grey_value_);
+                   // cams[i].setEnumValue("AutoExposureTargetGreyValueAuto", "Off");
+                   // cams[i].setFloatValue("AutoExposureTargetGreyValue", target_grey_value_);
                 } else {
-                    cams[i].setEnumValue("AutoExposureTargetGreyValueAuto", "Continuous");
+                   // cams[i].setEnumValue("AutoExposureTargetGreyValueAuto", "Continuous");
                 }
 
                 // cams[i].setIntValue("DecimationHorizontal", decimation_);
@@ -671,7 +671,7 @@ void acquisition::Capture::init_cameras(bool soft = false) {
                 // cams[i].setFloatValue("AcquisitionFrameRate", 5.0);
 
                 if (color_)
-                    cams[i].setEnumValue("PixelFormat", "BGR8");
+                    cams[i].setEnumValue("PixelFormat", "BayerRG8");
                     else
                         cams[i].setEnumValue("PixelFormat", "Mono8");
                 cams[i].setEnumValue("AcquisitionMode", "Continuous");

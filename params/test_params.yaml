@@ -1,8 +1,8 @@
 cam_ids:
-- 17197556
+- 19208686
 cam_aliases:
 - cam0
-master_cam: 17197556
+master_cam: 19208686
 skip: 20
 delay: 1.0
 
@@ -11,7 +11,7 @@ delay: 1.0
 #save_path: ~/projects/data
 #save_type: .bmp #binary or .tiff or .bmp
 #binning: 1 # going from 2 to 1 requires cameras to be unplugged and replugged
-#color: false
+color: true
 #frames: 50
 #soft_framerate: 20 # this frame rate reflects to the software frame rate set using ros::rate
 #exp: 997
@@ -19,8 +19,8 @@ delay: 1.0
 
 #Camera info message details
 distortion_model: plumb_bob
-image_height: 1080
-image_width: 1440
+image_height: 1536
+image_width: 2048
 distortion_coeffs:
 - [-0.021141875266089592, -0.3733872931278025, 2.385982550579459, 3.2824571732099725]
 
