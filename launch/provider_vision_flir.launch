@@ -1,0 +1,5 @@
+<launch>
+	<node name="provider_vision_flir" pkg="provider_vision_flir" type="provider_vision_flir_node" output="screen">
+  <rosparam command="load" file="$(find spinnaker_sdk_camera_driver)/config/camera_config_piscine_cvm.yaml"/>
+  </node>
+</launch>
